@@ -19,47 +19,50 @@
         <div class="container">
 
             <section class="calc-screen">
-                <p class="output">0</p>
+                <input type="text" class="input-output" dir="rtl" id="output">
             </section>
 
             <section class="section-btn">
                 <article class="article-btn">
-                    <button class="btn bg-color-grey" value="clear" title="clear">C</button>
-                    <button class="btn bg-color-grey" value="negative value" title="negative value"><span class="decorate-img-number-sign"></span></button>
+                    <button class="btn bg-color-grey" value="clear" title="clear all" onclick="clearAll()" id="clear-all">AC</button>
+                    <button class="btn bg-color-grey" value="negative value" title="negative value">
+                        <span class="decorate-img-number-sign"></span>
+                    </button>
                     <button class="btn bg-color-grey" value="%" title="percent">%</button>
                     <button class="btn bg-color-purple" value="/" title="to share">÷</button>
                 </article>
 
                 <article class="article-btn">
-                    <button class="btn bg-color-static" value="7" title="7">7</button>
-                    <button class="btn bg-color-static" value="8" title="8">8</button>
-                    <button class="btn bg-color-static" value="9" title="9">9</button>
+                    <button class="btn bg-color-static" value="7" title="7" id="7" onclick="addNumberSeven()">7</button>
+                    <button class="btn bg-color-static" value="8" title="8" id="8" onclick="addNumberEight()">8</button>
+                    <button class="btn bg-color-static" value="9" title="9" id="9" onclick="addNumberNine()">9</button>
                     <button class="btn bg-color-purple" value="*" title="multiply">×</button>
                 </article>
 
                 <article class="article-btn">
-                    <button class="btn bg-color-static" value="4" title="4">4</button>
-                    <button class="btn bg-color-static" value="5" title="5">5</button>
-                    <button class="btn bg-color-static" value="6" title="6">6</button>
+                    <button class="btn bg-color-static" value="4" title="4" id="4" onclick="addNumberFour()">4</button>
+                    <button class="btn bg-color-static" value="5" title="5" id="5" onclick="addNumberFife()">5</button>
+                    <button class="btn bg-color-static" value="6" title="6" id="6" onclick="addNumberSix()">6</button>
                     <button class="btn bg-color-purple" value="-" title="minus">-</button>
                 </article>
 
                 <article class="article-btn">
-                    <button class="btn bg-color-static" value="1" title="1">1</button>
-                    <button class="btn bg-color-static" value="2" title="2">2</button>
-                    <button class="btn bg-color-static" value="3" title="3">3</button>
+                    <button class="btn bg-color-static" value="1" title="1" id="1" onclick="addNumberOne()">1</button>
+                    <button class="btn bg-color-static" value="2" title="2" id="2" onclick="addNumberTwo()">2</button>
+                    <button class="btn bg-color-static" value="3" title="3" id="3" onclick="addNumberThree()">3</button>
                     <button class="btn bg-color-purple" value="+" title="plus">+</button>
                 </article>
 
                 <article class="article-btn">
-                    <button class="btn bg-color-static" value="." title="point">.</button>
-                    <button class="btn bg-color-static" value="0" title="0">0</button>
-                    <button class="btn bg-color-static" value="erase" title="delete number"><span class="decorate-img-erase"></span></button>
+                    <button class="btn bg-color-static" value="."    title="point" id="point" onclick="addPoint()">.</button>
+                    <button class="btn bg-color-static" value="0" title="0" id="0" onclick="addNumberZero()">0</button>
+                    <button class="btn bg-color-static" value="erase" title="delete number" onclick="backSpace()"><span class="decorate-img-erase"></span></button>
                     <button class="btn bg-color-purple" value="=" title="equally">=</button>
                 </article>
             </section>
         </div>
     </main>
 
+    <script src="/assets/scripts/index.js"></script>
 </body>
 </html>
