@@ -9,46 +9,56 @@
     <link rel="stylesheet" href="/assets/styles/style.css">
 </head>
 <body>
+    <header class="header">
+        <div class="container">
+
+        </div>
+    </header>
+
     <main class="calc">
-        <section class="calc-screen">
-            <p class="output">0</p>
-        </section>
-        <section class="section-btn">
-            <article class="article-btn">
-                <button class="btn bg-color-grey">C</button>
-                <button class="btn bg-color-grey">+/-</button>
-                <button class="btn bg-color-grey">%</button>
-                <button class="btn bg-color-purple">÷</button>
-            </article>
+        <div class="container">
 
-            <article class="article-btn">
-                <button class="btn bg-color-static">7</button>
-                <button class="btn bg-color-static">8</button>
-                <button class="btn bg-color-static">9</button>
-                <button class="btn bg-color-purple">×</button>
-            </article>
+            <section class="calc-screen">
+                <p class="output">0</p>
+            </section>
 
-            <article class="article-btn">
-                <button class="btn bg-color-static">4</button>
-                <button class="btn bg-color-static">5</button>
-                <button class="btn bg-color-static">6</button>
-                <button class="btn bg-color-purple">-</button>
-            </article>
+            <section class="section-btn">
+                <article class="article-btn">
+                    <button class="btn bg-color-grey" value="clear" title="clear">C</button>
+                    <button class="btn bg-color-grey" value="negative value" title="negative value"><span class="decorate-img-number-sign"></span></button>
+                    <button class="btn bg-color-grey" value="%" title="percent">%</button>
+                    <button class="btn bg-color-purple" value="/" title="to share">÷</button>
+                </article>
 
-            <article class="article-btn">
-                <button class="btn bg-color-static">1</button>
-                <button class="btn bg-color-static">2</button>
-                <button class="btn bg-color-static">3</button>
-                <button class="btn bg-color-purple">+</button>
-            </article>
+                <article class="article-btn">
+                    <button class="btn bg-color-static" value="7" title="7">7</button>
+                    <button class="btn bg-color-static" value="8" title="8">8</button>
+                    <button class="btn bg-color-static" value="9" title="9">9</button>
+                    <button class="btn bg-color-purple" value="*" title="multiply">×</button>
+                </article>
 
-            <article class="article-btn">
-                <button class="btn bg-color-static">.</button>
-                <button class="btn bg-color-static">0</button>
-                <button class="btn bg-color-static">&#9003</button>
-                <button class="btn bg-color-purple">=</button>
-            </article>
-        </section>
+                <article class="article-btn">
+                    <button class="btn bg-color-static" value="4" title="4">4</button>
+                    <button class="btn bg-color-static" value="5" title="5">5</button>
+                    <button class="btn bg-color-static" value="6" title="6">6</button>
+                    <button class="btn bg-color-purple" value="-" title="minus">-</button>
+                </article>
+
+                <article class="article-btn">
+                    <button class="btn bg-color-static" value="1" title="1">1</button>
+                    <button class="btn bg-color-static" value="2" title="2">2</button>
+                    <button class="btn bg-color-static" value="3" title="3">3</button>
+                    <button class="btn bg-color-purple" value="+" title="plus">+</button>
+                </article>
+
+                <article class="article-btn">
+                    <button class="btn bg-color-static" value="." title="point">.</button>
+                    <button class="btn bg-color-static" value="0" title="0">0</button>
+                    <button class="btn bg-color-static" value="erase" title="delete number"><span class="decorate-img-erase"></span></button>
+                    <button class="btn bg-color-purple" value="=" title="equally">=</button>
+                </article>
+            </section>
+        </div>
     </main>
 
 </body>

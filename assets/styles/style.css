@@ -8,20 +8,92 @@
 
 body {
     font-family: Work Sans;
+    background-color: #17171C;
+}
+
+button {
+    outline: none;
+
+    border: none;
+}
+
+.container {
+    padding: 0 20px;
 }
 
 .calc {
-    min-height: 100vh;
-    background-color: #17171C;
+    padding-top: 15px;
 }
 
 .section-btn {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    align-items: center;
+
+    gap: 15px;
+}
+
+.article-btn {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    flex: 1;
+
+    padding: 15px;
+
+    font-size: 32px;
+
+    color: white;
+
+    border-radius: 24px;
+}
+
+.btn:hover {
+    filter: brightness(120%);
+}
+.btn:active {
+    background-color: #4B5EFC;
+    filter: brightness(150%);
+}
+
+.bg-color-grey {
+    background-color: #4E505F;
+}
+.bg-color-purple {
+    background-color: #4B5EFC;
+}
+.bg-color-static {
+    background-color: #2E2F38;
 }
 
 
 
+
+
+
+
+
+
+
+
+
+.decorate-img-number-sign {
+    display: inline-block;
+    background-image: url("/assets/img/minus.svg");
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+
+    transform: translateY(3px);
+}
+
+.decorate-img-erase {
+    display: inline-block;
+    background-image: url("/assets/img/delete.svg");
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+}
 
