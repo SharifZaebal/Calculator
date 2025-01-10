@@ -19,45 +19,46 @@
         <div class="container">
 
             <section class="calc-screen">
-                <input type="text" class="input-output" dir="rtl" id="output">
+                <h2 id="example" class="example"></h2>
+                <input type="text" class="input-output" id="output" readonly>
             </section>
 
             <section class="section-btn">
                 <article class="article-btn">
                     <button class="btn bg-color-grey" value="clear" title="clear all" onclick="clearAll()" id="clear-all">AC</button>
-                    <button class="btn bg-color-grey" value="negative value" title="negative value">
+                    <button class="btn bg-color-grey" value="-" title="negative value" onclick="negativeValues()" id="negative value">
                         <span class="decorate-img-number-sign"></span>
                     </button>
-                    <button class="btn bg-color-grey" value="%" title="percent">%</button>
-                    <button class="btn bg-color-purple" value="/" title="to share">÷</button>
+                    <button class="btn bg-color-grey" value="%" title="percent" id="percent" onclick="funcPercent()">%</button>
+                    <button class="btn bg-color-purple" value="/" title="to share" onclick="funcShare()" id="share">÷</button>
                 </article>
 
                 <article class="article-btn">
                     <button class="btn bg-color-static" value="7" title="7" id="7" onclick="addNumberSeven()">7</button>
                     <button class="btn bg-color-static" value="8" title="8" id="8" onclick="addNumberEight()">8</button>
                     <button class="btn bg-color-static" value="9" title="9" id="9" onclick="addNumberNine()">9</button>
-                    <button class="btn bg-color-purple" value="*" title="multiply">×</button>
+                    <button class="btn bg-color-purple" value="*" title="multiply" id="multiply" onclick="funcMultiply()">×</button>
                 </article>
 
                 <article class="article-btn">
                     <button class="btn bg-color-static" value="4" title="4" id="4" onclick="addNumberFour()">4</button>
                     <button class="btn bg-color-static" value="5" title="5" id="5" onclick="addNumberFife()">5</button>
                     <button class="btn bg-color-static" value="6" title="6" id="6" onclick="addNumberSix()">6</button>
-                    <button class="btn bg-color-purple" value="-" title="minus">-</button>
+                    <button class="btn bg-color-purple" value="-" title="minus" id="minus" onclick="funcMinus()">-</button>
                 </article>
 
                 <article class="article-btn">
                     <button class="btn bg-color-static" value="1" title="1" id="1" onclick="addNumberOne()">1</button>
                     <button class="btn bg-color-static" value="2" title="2" id="2" onclick="addNumberTwo()">2</button>
                     <button class="btn bg-color-static" value="3" title="3" id="3" onclick="addNumberThree()">3</button>
-                    <button class="btn bg-color-purple" value="+" title="plus">+</button>
+                    <button class="btn bg-color-purple" value="+" title="plus" id="plus" onclick="funcPlus()">+</button>
                 </article>
 
                 <article class="article-btn">
-                    <button class="btn bg-color-static" value="."    title="point" id="point" onclick="addPoint()">.</button>
+                    <button class="btn bg-color-static" value=","    title="point" id="point" onclick="addPoint()">,</button>
                     <button class="btn bg-color-static" value="0" title="0" id="0" onclick="addNumberZero()">0</button>
                     <button class="btn bg-color-static" value="erase" title="delete number" onclick="backSpace()"><span class="decorate-img-erase"></span></button>
-                    <button class="btn bg-color-purple" value="=" title="equally">=</button>
+                    <button class="btn bg-color-purple" value="=" title="equally" id="sum" onclick="funkSum()">=</button>
                 </article>
             </section>
         </div>
