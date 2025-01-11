@@ -17,29 +17,30 @@ function evil(fn) {
 function checking() {
     if (clear) {
         example.innerText = ''
-        output = ''
         initialValue.value = ''
+
+        clear = false
     }
 }
 
 function checkingForZero() {
-    if (Number(initialValue.value[0]) === 0) {
+    if (Number(initialValue.value[0]) === 0 && initialValue.value[1] !== ',') {
         initialValue.value = ''
     }
 }
 
-function checkingNumberCalculation() {
-    if (initialValue.value === '') {
-        example.innerText = 'Введите число'
+function checkingExample() {
+    if (Boolean(example.innerText) === true) {
+        example.innerText = ''
     }
 }
-
 // End
 
 // Функции очистки поле ввода start
 
 function clearAll() {
     result = ''
+    output = ''
     initialValue.value = '';
     example.innerHTML = ''
 }
@@ -57,30 +58,51 @@ function funcPlus() {
     if (initialValue.value === '') {
         example.innerText = 'Введите число'
     } else {
+        checkingExample()
         let calculationSign = document.getElementById('plus').value;
-        result += initialValue.value + calculationSign;
+        result = initialValue.value + calculationSign;
         initialValue.value = ''
     }
 }
 function funcMinus() {
-    let calculationSign = document.getElementById('minus').value;
-    result += initialValue.value + calculationSign;
-    initialValue.value = ''
+    if (initialValue.value === '') {
+        example.innerText = 'Введите число'
+    } else {
+        checkingExample()
+        let calculationSign = document.getElementById('minus').value;
+        result = initialValue.value + calculationSign;
+        initialValue.value = ''
+    }
 }
 function funcMultiply() {
-    let calculationSign = document.getElementById('multiply').value;
-    result += initialValue.value + calculationSign;
-    initialValue.value = ''
+    if (initialValue.value === '') {
+        example.innerText = 'Введите число'
+    } else {
+        checkingExample()
+        let calculationSign = document.getElementById('multiply').value;
+        result = initialValue.value + calculationSign;
+        initialValue.value = ''
+    }
 }
 function funcShare() {
-    let calculationSign = document.getElementById('share').value;
-    result += initialValue.value + calculationSign;
-    initialValue.value = ''
+    if (initialValue.value === '') {
+        example.innerText = 'Введите число'
+    } else {
+        checkingExample()
+        let calculationSign = document.getElementById('share').value;
+        result = initialValue.value + calculationSign;
+        initialValue.value = ''
+    }
 }
 function funcPercent() {
-    let calculationSign = document.getElementById('share').value;
-    result += initialValue.value + calculationSign;
-    initialValue.value = ''
+    if (initialValue.value === '') {
+        example.innerText = 'Введите число'
+    } else {
+        checkingExample()
+        let calculationSign = document.getElementById('share').value;
+        result = initialValue.value + calculationSign;
+        initialValue.value = ''
+    }
 }
 function funkSum() {
     output = result + initialValue.value;
@@ -105,7 +127,8 @@ function negativeValues() {
 // Добавление цифр start
 
 function addPoint() {
-    if (initialValue.value === '') {
+    if (initialValue.value === '' || Boolean(example.innerText) === true) {
+        checking()
         initialValue.value = 0
         const value = document.getElementById('point').value;
         return initialValue.value += value;
@@ -113,6 +136,7 @@ function addPoint() {
         const value = document.getElementById('point').value;
         return initialValue.value += value;
     }
+
 
 }
 function addNumberZero() {
