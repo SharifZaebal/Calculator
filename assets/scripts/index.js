@@ -3,6 +3,7 @@ let example = document.getElementById('example')
 let result = ''
 let output = ''
 let clear = false
+const argumentPoint = '.'
 
 // Функция вычисления start
 
@@ -24,7 +25,7 @@ function checking() {
 }
 
 function checkingForZero() {
-    if (Number(initialValue.value[0]) === 0 && initialValue.value[1] !== ',') {
+    if (Number(initialValue.value[0]) === 0 && initialValue.value[1] !== '.') {
         initialValue.value = ''
     }
 }
@@ -115,6 +116,8 @@ function funkSum() {
 function negativeValues() {
     if (initialValue.value === '0') {
         example.innerText = 'Ноль не может быть отрицательным';
+    } else if (initialValue.value[0] === '-') {
+        return
     } else {
         let sign = '-'
         let value = sign + initialValue.value;
@@ -132,10 +135,13 @@ function addPoint() {
         initialValue.value = 0
         const value = document.getElementById('point').value;
         return initialValue.value += value;
+    } else if(Boolean(initialValue.value.valueOf('.')) === Boolean('.')) {
+        return
     } else {
         const value = document.getElementById('point').value;
         return initialValue.value += value;
     }
+
 
 
 }

@@ -26,6 +26,13 @@ button {
     justify-content: center;
 }
 
+.flex-space-between {
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+}
+
 .calc {
     padding-top: 15px;
 }
@@ -139,41 +146,44 @@ button {
 }
 
 .toggle {
+    position: relative;
     width: 72px;
     height: 32px;
 
     border-radius: 18px;
 
     background-color: #17171C;
-
-    display: flex;
 }
 
 .toggle-switch {
-    display: inline-block;
-
-    background-color: #4E505F;
-
     width: 24px;
     height: 24px;
     border-radius: 50%;
+
+    background-color: #4E505F;
+
+    position: absolute;
+
+    left: 4px;
+    bottom: 4px;
 }
 
 .decorate-img-sun {
     display: inline-block;
     background-image: url("../img/sun.svg");
-    width: 24px;
-    height: 24px;
+    width: 16px;
+    height: 16px;
     background-repeat: no-repeat;
 
-    text-align: start;
+    position: absolute;
+
+    right: 4px;
 }
+
 .decorate-img-moon {
     display: inline-block;
     background-image: url("../img/moon.svg");
-    width: 24px;
-    height: 24px;
+    width: 16px;
+    height: 16px;
     background-repeat: no-repeat;
-
-    text-align: end;
 }
