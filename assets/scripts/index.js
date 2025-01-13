@@ -117,15 +117,12 @@ function funkSum() {
 function negativeValues() {
     if (initialValue.innerText === '0') {
         example.innerText = 'Ноль не может быть отрицательным';
-    } else if (initialValue.innerText[0] === '-') {
-        return
+    } else if (initialValue.innerText.startsWith('-')) {
+        initialValue.innerText = initialValue.innerText.substring(1);
+    } else if (initialValue.innerText !== '') {
+        initialValue.innerText = '-' + initialValue.innerText;
     } else if (initialValue.innerText === '') {
-        return
-    }
-    else {
-        let sign = '-'
-        let value = sign + initialValue.innerText;
-        return initialValue.innerText = value;
+        initialValue.innerText = '-0';
     }
 }
 
@@ -137,76 +134,73 @@ function addPoint() {
     if (initialValue.innerText === '' || Boolean(example.innerText) === true) {
         checking()
         initialValue.innerText = 0
-        const value = document.getElementById('point').value;
+        const value = '.'
         return initialValue.innerText += value;
-    } else if(Boolean(initialValue.innerText.valueOf('.')) === Boolean('.')) {
-        return
+    } else if(Boolean(initialValue.innerText.includes('.')) === true) {
+
     } else {
-        const value = document.getElementById('point').value;
+        const value = '.'
         return initialValue.innerText += value;
     }
-
-
-
 }
 function addNumberZero() {
     checking()
     checkingForZero()
-    const value = document.getElementById('0').value;
+    const value = 0
     return initialValue.innerText += value
 }
 function addNumberOne() {
     checking()
     checkingForZero()
-    const value = document.getElementById('1').value;
+    const value = 1
     return initialValue.innerText += value
 }
 function addNumberTwo() {
     checking()
     checkingForZero()
-    const value = document.getElementById('2').value;
+    const value = 2
     return initialValue.innerText += value
 }
 function addNumberThree() {
     checking()
     checkingForZero()
-    const value = document.getElementById('3').value;
+    const value = 3
     return initialValue.innerText += value
 }
 function addNumberFour() {
     checking()
     checkingForZero()
-    const value = document.getElementById('4').value;
+    const value = 4
     return initialValue.innerText += value
 }
 function addNumberFife() {
     checking()
     checkingForZero()
-    const value = document.getElementById('5').value;
+    const value = 5
     return initialValue.innerText += value
 }
 function addNumberSix() {
     checking()
     checkingForZero()
-    const value = document.getElementById('6').value;
+    const value = 6
     return initialValue.innerText += value
 }
 function addNumberSeven() {
     checking()
     checkingForZero()
-    const value = document.getElementById('7').value
+    const value = 7
     return initialValue.innerText += value
 }
 function addNumberEight() {
     checking()
     checkingForZero()
-    const value = document.getElementById('8').value
+    const value = 8
     return initialValue.innerText += value
 }
 function addNumberNine() {
     checking()
     checkingForZero()
-    const value = document.getElementById('9').value
+    const value = 9
     return initialValue.innerText += value
 }
 
