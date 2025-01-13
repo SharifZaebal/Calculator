@@ -170,19 +170,19 @@ button {
 
 .decorate-img-sun {
     display: inline-block;
-    background-image: url("../img/sun.svg");
+    background-image: url('../img/sun.svg');
     width: 16px;
     height: 16px;
     background-repeat: no-repeat;
 
     position: absolute;
 
-    right: 4px;
+
 }
 
 .decorate-img-moon {
     display: inline-block;
-    background-image: url("../img/moon.svg");
+    background-image: url('../img/moon.svg');
     width: 16px;
     height: 16px;
     background-repeat: no-repeat;
